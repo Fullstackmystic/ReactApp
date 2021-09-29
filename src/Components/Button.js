@@ -8,15 +8,17 @@ class  Button extends React.Component{
         }
     }
     Add=()=>{
+        const item=document.querySelector('input').value
             this.setState({
-                list:'Works'
+                list:item
             }    
         )
     }
     render(){
         return(
             <div id="container">
-                <button id="btn" onClick={this.Add}>CLick</button>
+                <input type="text"></input>
+                <button id="btn" onClick={this.Add}>Click</button>
                 <div>{this.state.list}</div>
             </div>
         )
